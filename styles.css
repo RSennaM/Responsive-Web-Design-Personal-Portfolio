@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+:root {
+    --background-color1: #000B58;
+    --background-color2: #006A67;
+    --background-color3: #003161;
+    --text-color: #FFF4B7;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1, h2 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    background: var(--background-color2);
+}
+
+#navbar ul {
+    display:flex;
+    list-style-type: none;
+    gap: 2rem;
+    padding: 1rem;
+    justify-content: end;
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
+#navbar ul li a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+#navbar ul li a:hover {
+    color: var(--background-color1);
+}
+
+#welcome-section {
+    height: 80vh;
+    background: var(--background-color1);
+    color: var(--text-color);
+    padding: 3rem;
+}
+
+#home {
+    margin-top: 20vh;
+}
+
+.heading {
+    font-size: 5rem;
+}
+
+.subtitle {
+    font-size: 2.5rem;
+    font-weight: 300;
+}
+
+#projects {
+    padding-bottom: 2rem;
+    padding-top: 10vh;
+}
+
+.project-tile {
+    width: 900px;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 2rem;
+    margin: 10vh auto 0;
+}
+
+#projects {
+    background: var(--text-color)    
+}
+
+#projects > h1 {
+    font-size: 4rem;
+    text-align: center;
+    padding: 3rem 0 0;
+    font-weight: 500;
+}
+
+.project{
+    background: var(--background-color2);
+    border: 3px solid transparent;
+    border-radius: 5px;
+}
+
+.project > a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;    
+}
+
+.project > a:hover {
+    opacity: 0.7;
+}
+
+.project-title {
+    font-weight: 500;
+    padding: 0.5rem 1rem 0.8rem;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+}
+
+#contact {
+    height: 100vh;
+    background: var(--background-color1);
+    color: var(--text-color);
+    padding: 3rem;
+    text-align: center;
+    padding-top: 20vh;
+}
+
+#contact > p {
+    font-size: 1.5rem;
+    font-weight: 300;
+    padding: 2rem;    
+}
+
+.lets {
+    font-size: 4rem;    
+}
+
+.social > a {
+    font-size: 3rem;
+    padding: 1rem;
+    color: var(--background-color2);
+
+}
+
+.social > a:hover {
+    color: var(--text-color);    
+}
+
+footer {
+    background-color: var(--background-color1);
+    border-top: 3px solid var(--background-color2);
+    color: var(--text-color);    
+}
+
+footer > .copy {
+    text-align: center;
+    padding: 2rem;
+}
+
+@media screen and (max-width: 810px) {
+    #navbar ul {
+        justify-content: center;
+    }
+
+    .heading {
+        font-size: 4rem;
+    }
+
+    .subtitle {
+        font-size: 2rem;
+    }
+
+    .project-tile {
+        width: 100%;
+        grid-template-columns: 1fr;
+        padding: 3rem;
+        margin: 0;
+    }
+    
+    #projects, #contact {
+        height: auto;
+    }
+
+    #projects > h1 {
+        font-size: 3rem;
+        padding: 0;
+        margin-bottom: 0;
+    }
+
+    #welcome-section, #contact {
+        padding: 2rem;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .heading {
+        font-size: 3rem;
+        text-align: center;
+    }
+
+    .subtitle {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+}
